@@ -1,0 +1,145 @@
+
+
+
+<!DOCTYPE html>
+<html lang="english">
+<head>
+<title>Bootstrap Example</title>
+
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+	crossorigin="anonymous"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="delete.css" type="text/css">
+<script src="https://kit.fontawesome.com/191f70e6df.js"
+	crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script>
+	function validateForm() {
+		const id = document.getElementById("id").value;
+		const name = document.getElementById("name").value;
+		const course = document.getElementById("course").value;
+		const cgpa = document.getElementById("cgpa").value;
+		const address = document.getElementById("address").value;
+
+		if (!id || !name || !course || !cgpa || !address) {
+			document.getElementById("error-msg").textContent = "Please enter all data.";
+			return false;
+		}
+		return true;
+	}
+</script>
+
+</head>
+<body class=body>
+
+
+
+
+	<div class="container-fluid p-5 ">
+
+
+
+
+		<nav id="nav" class="navbar navbar-dark  fixed-top">
+
+
+
+
+			<div class="logo">
+				<img class="img" src="/payrolemanagement/images/rcblogo.jpg" />
+				<h3>Crude Operations</h3>
+
+			</div>
+
+
+			<div>
+				<ul class="links">
+					<li class="link"><a href="login.html" class="item">Insert</a></li>
+					<li class="link"><a href="delete.html" class="item"> Delete</a></li>
+					<li class="link"><a href="update.html" class="item">update</a></li>
+					<li class="link"><a href="retrieve.html" class="item">retrieve </a></li>
+
+				</ul>
+
+			</div>
+
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+				aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+				<i class="fa-sharp fa-solid fa-bars fa-spin fa-lg"
+					style="color: #000000;"></i>
+			</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1"
+				id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+				<div class="offcanvas-header">
+
+					<button type="button" class="btn-close btn-close-white"
+						data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<div>
+						<ul class="offcanavas">
+							<hr></hr>
+							<li class="offcanvas-item"><a class="a" href="login.html">Insert</a></li>
+							<hr></hr>
+							<li class="offcanvas-item"><a class="a" href="delete.html">Delete</a></li>
+							<hr></hr>
+							<li class="offcanvas-item"><a class="a" href="update.html">Update</a></li>
+							<hr></hr>
+							<li class="offcanvas-item"><a class="a" href="retrieve.html">Retrieve</a></li>
+							<hr></hr>
+						</ul>
+
+
+
+					</div>
+				</div>
+			</div>
+
+		</nav>
+
+
+
+	</div>
+    <h3>Delete Your Data></h3>
+	<div class="container ">
+		<div class="row">
+
+			<div class="col-md-6 text-center">
+				<form action="Deleting.jsp" method="post" onsubmit="return validateForm()">
+					<input type="text" id="id" name="id" placeholder="Enter your ID" required> <br/>
+					<input type="submit" value="Submit">
+					 <input type="reset" value="Reset"> <span id="error-msg" class="error-message"></span>
+				</form>
+
+
+			</div>
+			<div class="col-md-6">
+				<div class="left-img"></div>
+
+
+			</div>
+</body>
+</html>
